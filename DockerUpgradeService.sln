@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30320.27
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DockerUpgradeService", "DockerUpgradeService\DockerUpgradeService.csproj", "{5690E1BA-7BBF-4FEE-9667-2898C561A437}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SampleWebApp", "SampleWebApp\SampleWebApp.csproj", "{641429A8-A29E-49D2-8325-10664FFA381F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{3DBBCF75-7276-41DE-8941-62322713DB03}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5690E1BA-7BBF-4FEE-9667-2898C561A437}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5690E1BA-7BBF-4FEE-9667-2898C561A437}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5690E1BA-7BBF-4FEE-9667-2898C561A437}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5690E1BA-7BBF-4FEE-9667-2898C561A437}.Release|Any CPU.Build.0 = Release|Any CPU
+		{641429A8-A29E-49D2-8325-10664FFA381F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{641429A8-A29E-49D2-8325-10664FFA381F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{641429A8-A29E-49D2-8325-10664FFA381F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{641429A8-A29E-49D2-8325-10664FFA381F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {45728A3B-BE60-4EBA-999C-51A55A98BC32}
+	EndGlobalSection
+EndGlobal
