@@ -22,11 +22,16 @@ namespace DockerUpgradeService
         public Worker(ILogger<Worker> logger)
         {
             _logger = logger;
-            //_client = new DockerClientConfiguration(new Uri("npipe://./pipe/docker_engine")).CreateClient();
 
-            _logger.LogInformation($"Docker host: {Environment.GetEnvironmentVariable("docker_host")}");
+            var os = Environment.OSVersion.Platform;
+            _logger.LogInformation($"Operating System: {os}");
 
-            _client = new DockerClientConfiguration(new Uri(Environment.GetEnvironmentVariable("docker_host"))).CreateClient();
+            var dockerHostPipe = os.ToString().ToLower() == "unix" ? "unix:///var/run/docker.sock" : "npipe://./pipe/docker_engine";
+            _client = new DockerClientConfiguration(new Uri(dockerHostPipe)).CreateClient();
+
+            //_logger.LogInformation($"Docker host: {Environment.GetEnvironmentVariable("docker_host")}");
+
+            //_client = new DockerClientConfiguration(new Uri(Environment.GetEnvironmentVariable("docker_host"))).CreateClient();
         }
 
         protected override async Task ExecuteAsync(CancellationToken stoppingToken)

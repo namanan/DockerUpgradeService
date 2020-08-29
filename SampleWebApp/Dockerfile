@@ -9,6 +9,8 @@ COPY ["SampleWebApp.csproj", "."]
 RUN dotnet restore "SampleWebApp.csproj"
 COPY . .
 
+RUN find -type d -name bin -prune -exec rm -rf {} \; && find -type d -name obj -prune -exec rm -rf {} \;
+
 WORKDIR "/src"
 RUN dotnet build "SampleWebApp.csproj" -c Release -o /app/build
 
